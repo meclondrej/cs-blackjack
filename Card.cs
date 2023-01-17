@@ -1,5 +1,5 @@
 class Card {
-    int value;
+    public int value;
     public static string? ResolveValue(int v) {
         switch (v)
         {
