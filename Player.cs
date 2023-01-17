@@ -1,5 +1,5 @@
 class Player {
-    List<Card> hand = new List<Card>();
+    public List<Card> hand = new List<Card>();
     public Player() {
         this.hand.Add(new Card());
         this.hand.Add(new Card());
