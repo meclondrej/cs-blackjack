@@ -21,7 +21,10 @@ class Player {
         }
         return total;
     }
-    public bool isBJ() {
+    public bool? isBJ() {
+        if (this.hand.Count != 2) {
+            return null;
+        }
         if (this.getTotal() == 21) {
             return true;
         } else {
