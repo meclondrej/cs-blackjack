@@ -13,6 +13,7 @@
             }
         } else {
             Console.WriteLine("no player count argument passed: falling back to 1 player");
+            players.Add(new Player());
         }
     }
 }
