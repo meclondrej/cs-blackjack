@@ -16,6 +16,8 @@
             players.Add(new Player());
         }
         Console.WriteLine("C# Blackjack");
+        Dealer dealer = new Dealer();
+        Console.WriteLine("Dealer's first card: " + Card.ResolveValue(dealer.hand[0].value));
         for (int i = 0; i < players.Count; i++) {
             Console.WriteLine("");
             bool loop = true;
