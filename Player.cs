@@ -1,5 +1,6 @@
 class Player {
     public List<Card> hand = new List<Card>();
+    public bool eval = true;
     public Player() {
         this.hand.Add(new Card());
         this.hand.Add(new Card());
