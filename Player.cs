@@ -21,6 +21,15 @@ class Player {
         }
         return total;
     }
+
+    public string getFormattedHand(int i) {
+        string msg = "Player " + i.ToString() + "'s hand: ";
+        foreach (Card card in this.hand) {
+            msg = msg + Card.ResolveValue(card.value) + " ";
+        }
+        msg = msg + "(Total: " + this.getTotal() + ")";
+        return msg;
+    }
     public bool? isBJ() {
         if (this.hand.Count != 2) {
             return null;
