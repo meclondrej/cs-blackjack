@@ -24,11 +24,11 @@
             while (loop) {    
                 Console.WriteLine(players[i].getFormattedHand(i + 1));
                 if (players[i].isBJ()) {
-                    Console.WriteLine("Player " + (i + 1) + " BLACKJACKED!");
+                    Console.WriteLine("Player " + (i + 1).ToString() + " BLACKJACKED!");
                     players[i].eval = false;
                     loop = false;
                 } else if (players[i].isBusted()) {
-                    Console.WriteLine("Player " + (i + 1) + " BUSTED!");
+                    Console.WriteLine("Player " + (i + 1).ToString() + " BUSTED!");
                     players[i].eval = false;
                     loop = false;
                 } else {
