@@ -32,7 +32,7 @@
                     players[i].eval = false;
                     loop = false;
                 } else {
-                    Console.WriteLine("hit/stand [h/s]: ");
+                    Console.Write("hit/stand [h/s]: ");
                     string? choice = Console.ReadLine();
                     if (choice == "h") {
                         players[i].hand.Add(new Card());
