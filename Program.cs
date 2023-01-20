@@ -42,5 +42,42 @@
                 }
             }
         }
+        dealer.evaluateDealer();
+        Console.WriteLine("");
+        Console.WriteLine(dealer.getFormattedHand());
+        if (dealer.isBJ()) {
+            Console.WriteLine("Dealer BLACKJACKED!");
+            for (int i = 0; i < players.Count; i++) {
+                if (!players[i].eval) {
+                    continue;
+                }
+                if (players[i].isBJ()) {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " PUSHED!");
+                } else {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " LOST!");
+                }
+            }
+        } else if (dealer.isBusted()) {
+            for (int i = 0; i < players.Count; i++) {
+                if (players[i].eval) {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " WON!");
+                }
+            }
+        } else {
+            for (int i = 0; i < players.Count; i++) {
+                if (!players[i].eval) {
+                    continue;
+                }
+                if (players[i].getTotal() > dealer.getTotal()) {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " WON!");
+                }
+                if (players[i].getTotal() == dealer.getTotal()) {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " PUSHED!");
+                }
+                if (players[i].getTotal() < dealer.getTotal()) {
+                    Console.WriteLine("Player " + (i + 1).ToString() + " LOST!");
+                }
+            }
+        }
     }
 }
