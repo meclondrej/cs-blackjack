@@ -2,6 +2,9 @@ class Player {
     public List<Card> hand = new List<Card>();
     public bool eval = true;
     public Player() {
+        if (this.GetType() != typeof(Player)) {
+            return;
+        }
         this.hand.Add(new Card());
         this.hand.Add(new Card());
     }
